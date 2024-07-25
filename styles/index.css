@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz@0,9..40;1,9..40&display=swap");
+html {
+ /* scroll-behavior: smooth; */
+ /* -ms-overflow-style: none;  */
+ /* scrollbar-width: none;  */
+}
+:root {
+ --acc-olive: #c2d4bc;
+ --acc-navy: #5674a7;
+ --acc-magenta: #e35074;
+ --acc-mustard: #f4cc63;
+}
+body {
+ transition: all;
+ font-family: "DM Sans", sans-serif;
+ font-optical-sizing: auto;
+ font-weight: 400;
+ font-style: normal;
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ width: 100vw;
+ height: 100vh;
+ overflow: hidden;
+ scroll-snap-type: y mandatory; /* Enables vertical scroll snapping */
+}
+#navbar {
+ position: fixed;
+ top: 0;
+ width: 100%;
+ z-index: 100;
+ display: flex;
+ justify-content: end;
+}
+#slide-1,
+#slide-2,
+#slide-3,
+#slide-4,
+#slide-5 {
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ position: relative;
+ scroll-snap-align: start;
+ scroll-snap-stop: always;
+ position: relative;
+}
+
+#slide-3 {
+ background-color: var(--acc-mustard);
+ overflow-y: auto;
+ height: 100vh;
+}
+#slide-4 {
+ background-color: var(--acc-magenta);
+ height: 100vh;
+ /* overflow: auto; */
+}
+#slide-5 {
+ background-color: var(--acc-olive);
+}
+
+#main_content {
+ width: 40rem;
+ padding: 0.5rem;
+ border-width: 6px 8px 8px 6px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+#intro_content {
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ /* background-color: green; */
+}
+
+#project_content {
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap; /* -ms-overflow-style: none;  */
+ /* scrollbar-width: none;  */
+}
+
+/* #main_content > img {
+ border-radius: 100%;
+ width: 10em;
+ height: 10em;
+ object-fit: cover;
+ border: 6px black solid;
+} */
+
+.border {
+ border: solid black;
+ border-width: 4px 8px 8px 4px;
+ border-radius: 1rem;
+ /* padding: 0.5rem; */
+}
+
+.bg-olive {
+ background-color: var(--acc-olive);
+}
+
+.bg-navy {
+ background-color: var(--acc-navy);
+}
+
+.bg-magenta {
+ background-color: var(--acc-magenta);
+}
+
+.bg-mustard {
+ background-color: var(--acc-mustard);
+}
+
+.text-olive {
+ color: var(--acc-olive);
+}
+
+.text-navy {
+ color: var(--acc-navy);
+}
+
+.text-magenta {
+ color: var(--acc-magenta);
+}
+
+.text-mustard {
+ color: var(--acc-mustard);
+}
+.btn {
+ cursor: pointer;
+ font: bold;
+ width: 10rem;
+ height: 3rem;
+ font-size: 25px;
+ text-align: center;
+ text-decoration: none;
+ color: white;
+ border-width: 4px 8px 8px 4px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+.btn:focus {
+ border-width: 4px 5px 5px 4px;
+ /* scale: 0.9; */
+ /* background-color: var(--acc-magenta); */
+}
+.card {
+ background-color: white;
+ padding: 1rem;
+ height: 50vh;
+ width: 25vw;
+ -ms-overflow-style: none; /* for Internet Explorer, Edge */
+ scrollbar-width: none; /* for Firefox */
+ overflow-y: scroll;
+}
+.card > div {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+}
+.card > div > i {
+ font-size: 4rem;
+}
+
+.card:hover {
+ /* border-width: 5px 10px 10px 5px; */
+}
+
+.project-tab {
+ background-color: white;
+ padding: 0.5rem;
+ width: 40%;
+ height: 50%;
+ margin-top: 1rem;
+ margin-left: 1rem;
+ overflow: auto;
+}
+.project-tab > .links > a {
+ font-size: 20px;
+ color: var(--acc-navy);
+}
+.back-button {
+ position: absolute;
+ bottom: 1rem;
+ right: 2rem;
+}
+.typewriter h1 {
+ overflow: hidden; /* Ensures the content is not revealed until the animation */
+ border-right: 0.15em solid var(--acc-magenta);
+ white-space: nowrap; /* Keeps the content on a single line */
+ margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+ letter-spacing: 0em; /* Adjust as needed */
+ animation: typing 2s steps(20, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+ from {
+  width: 0;
+ }
+ to {
+  width: 100%;
+ }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+ from,
+ to {
+  border-color: transparent;
+ }
+ 50% {
+  border-color: var(--acc-navy);
+ }
+}
