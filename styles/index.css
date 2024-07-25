@@ -88,17 +88,20 @@ body {
 }
 
 #contact_content {
- background-color: white;
+ /* background-color: white; */
  display: flex;
- flex-direction: column;
- width: fit-content;
+ /* flex-direction: column; */
+ width: 50%;
  height: fit-content;
+ justify-content: space-evenly;
  padding: 1rem;
  font-size: 3rem;
 }
 #contact_content a {
  text-decoration: none;
  color: black;
+ padding: 0.5rem;
+ background-color: white;
 }
 
 .border {
