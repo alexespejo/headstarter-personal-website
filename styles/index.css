@@ -57,7 +57,8 @@ body {
 #slide-4 {
  background-color: var(--acc-magenta);
  height: 100vh;
- /* overflow: auto; */
+ overflow-y: auto;
+ overflow-x: hidden;
 }
 #slide-5 {
  background-color: var(--acc-olive);
@@ -186,9 +187,9 @@ body {
 .project-tab {
  background-color: white;
  padding: 0.5rem;
- width: 40%;
- height: 50%;
- margin-top: 1rem;
+ width: 30%;
+ height: 30%;
+ margin-top: 0.5rem;
  margin-left: 1rem;
  overflow: auto;
 }
